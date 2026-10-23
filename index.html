@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamify</title>
+    <link rel="icon" type="image/png" href="streamify_logo_smallerr.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <!-- SVG Streamify Logo -->
+            <svg class="logo-svg" viewBox="0 0 100 100" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 20 L70 50 L25 80 Z" stroke="#00d2ff" stroke-width="8" stroke-linejoin="round" fill="none"/>
+                <path d="M55 25 A 30 30 0 0 1 85 50" stroke="#00d2ff" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <path d="M65 15 A 45 45 0 0 1 95 50" stroke="#00d2ff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span>Streamify</span>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="search-section">
+            <form id="url-form" class="search-form">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-link input-icon"></i>
+                    <input type="text" id="video-url-input" placeholder="Liitä videon URL" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fa-solid fa-play"></i> Toista
+                </button>
+            </form>
+        </section>
+
+        <section class="player-section">
+            <div id="media-wrapper" class="media-wrapper">
+                <div class="placeholder">
+                    <i class="fa-solid fa-circle-play placeholder-icon"></i>
+                    <p>Syötä videon osoite yläpuolelle katsoaksesi videon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <h1 id="video-title">Syötä videon osoite</h1>
+                <div class="url-box">
+                    <i class="fa-solid fa-link"></i>
+                    <span id="video-url-display" class="url-text">Ei valittua URL-osoitetta</span>
+                    <button id="copy-url-btn" class="copy-btn" title="Kopioi URL">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="video-meta">
+                    <div class="author-info">
+                        <div class="avatar-container">
+                            <img id="channel-avatar-img" class="avatar-img" src="" alt="Kanavan profiilikuva" style="display: none;">
+                            <div id="channel-avatar-placeholder" class="avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="channel-name" id="video-author">Kanava / Esittäjä</span>
+                            <span class="sub-count" id="video-channel-info">Lähde</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
